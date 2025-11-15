@@ -264,32 +264,32 @@ flowchart LR
 ```mermaid
 graph TB
     subgraph Input["Input Layer"]
-        A[Text Input<br/>Max 512 tokens]
+        A[Text Input - Max 512 tokens]
     end
 
     subgraph Tokenization["Tokenization"]
         B[WordPiece Tokenizer]
-        C[Add Special Tokens<br/>[CLS] ... [SEP]]
+        C[Add Special Tokens]
         D[Attention Masks]
     end
 
-    subgraph Transformer["🤖 DistilBERT Backbone"]
-        E[Embedding Layer<br/>768 dimensions]
+    subgraph Transformer["DistilBERT Backbone"]
+        E[Embedding Layer 768 dimensions]
         F[6 Transformer Blocks]
-        G[Multi-Head Attention<br/>12 heads]
+        G[Multi-Head Attention 12 heads]
         H[Feed Forward Network]
         I[Layer Normalization]
     end
 
     subgraph Classification["Classification Head"]
-        J[Pooler Output<br/>[CLS] token]
+        J[Pooler Output CLS token]
         K[Dropout 0.1]
-        L[Linear Layer<br/>768 → 2]
+        L[Linear Layer 768 to 2]
         M[Softmax]
     end
 
     subgraph Output["Output Layer"]
-        N[Probability Distribution<br/>Normal | At-Risk]
+        N[Probability Distribution]
         O[Predicted Label]
         P[Confidence Score]
     end
@@ -725,35 +725,6 @@ graph TB
 ```
 
 ---
-
-## 📈 Future Architecture Enhancements
-
-### Roadmap
-
-```mermaid
-timeline
-    title MindTrack AI Architecture Roadmap
-    
-    section Q1 2025
-        Current State : React + Flask + DistilBERT + Gemini
-        
-    section Q2 2025
-        WebSocket Support : Real-time analysis streaming
-        Response Caching : Optional in-memory cache
-        
-    section Q3 2025
-        User Accounts : Optional historical tracking (opt-in)
-        User Authentication : OAuth 2.0 integration
-        
-    section Q4 2025
-        Microservices : Split extractors into separate services
-        Kubernetes : Container orchestration
-        
-    section 2026
-        Mobile Apps : React Native iOS/Android
-        GraphQL API : Flexible data querying
-        Multi-language : i18n support
-```
 
 ---
 
