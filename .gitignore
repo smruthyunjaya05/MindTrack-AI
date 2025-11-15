@@ -87,6 +87,12 @@ app/.env
 credentials.json
 secrets.json
 
+# Specific files with hardcoded secrets
+backend/list_models.py
+**/list_models.py
+**/*_test.py
+**/*_demo.py
+
 # ==================== Node.js / Frontend ====================
 # Dependencies
 node_modules/
