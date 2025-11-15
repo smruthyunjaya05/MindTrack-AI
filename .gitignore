@@ -1,0 +1,302 @@
+# MindTrack AI - Comprehensive .gitignore
+
+# ==================== Python ====================
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+*.virtualenv
+
+# Python Cache
+__pycache__/
+*__pycache__/
+app/__pycache__/
+backend/__pycache__/
+ml_training/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ==================== Environment Variables (CRITICAL) ====================
+# NEVER commit these files - they contain API keys and secrets!
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+backend/.env
+frontend/.env
+app/.env
+
+# ==================== API Keys & Secrets ====================
+# Explicitly ignore files that might contain sensitive data
+*secret*
+*SECRET*
+*api_key*
+*API_KEY*
+*token*
+*TOKEN*
+*.pem
+*.key
+*.cert
+credentials.json
+secrets.json
+
+# ==================== Node.js / Frontend ====================
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+app/node_modules/
+jspm_packages/
+
+# Build outputs
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/out/
+backend/dist/
+backend/build/
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+backend/package-lock.json
+frontend/package-lock.json
+app/package-lock.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ==================== IDEs & Editors ====================
+# VSCode
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw[a-z]
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ==================== Machine Learning ====================
+# Large Model Files (store separately or use Git LFS)
+data/models/distilbert_emotion_model/model.safetensors
+data/models/distilbert_emotion_model/*.safetensors
+data/models/distilbert_emotion_model/*.bin
+data/models/**/*.bin
+data/models/**/*.safetensors
+data/models/**/*.h5
+data/models/**/*.pth
+data/models/**/*.pt
+data/models/**/*.pkl
+data/models/**/*.ckpt
+app/models/**/*.bin
+app/models/**/*.safetensors
+app/ml/**/*.bin
+app/ml/**/*.safetensors
+
+# Training Checkpoints
+ml_training/checkpoints/
+ml_training/runs/
+ml_training/logs/
+checkpoints/
+runs/
+
+# TensorBoard
+events.out.tfevents.*
+
+# Weights & Biases
+wandb/
+
+# ==================== Datasets ====================
+# Large CSV files (datasets should be downloaded separately)
+data/*.csv
+data/raw/*.csv
+data/processed/*.csv
+data/processed/combined_dataset.csv
+data/processed/train.csv
+data/processed/validation.csv
+data/processed/test.csv
+data/training/*.csv
+
+# Keep directory structure
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/models/.gitkeep
+
+# Specific large dataset files
+data/training.1600000.processed.noemoticon.csv
+data/Suicide_Detection.csv
+data/mental_health.csv
+
+# ==================== Logs ====================
+logs/
+*.log
+logs/*.log
+logs/logs.md
+backend/logs/
+frontend/logs/
+app/logs/
+
+# Keep logs directory structure but ignore content
+!logs/.gitkeep
+
+# ==================== Databases ====================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ==================== OS Generated ====================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ==================== Jupyter Notebook ====================
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ==================== Testing ====================
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ==================== Temporary Files ====================
+*.tmp
+*.bak
+*.swp
+*.swo
+temp/
+tmp/
+*.temp
+
+# ==================== Docker ====================
+*.dockerignore
+docker-compose.override.yml
+
+# ==================== Miscellaneous ====================
+# Backup files
+*.backup
+*.old
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# System files
+.Spotlight-V100
+.Trashes
+
+# ==================== Keep Important Files ====================
+# Ensure these are NOT ignored
+!.gitignore
+!README.md
+!ARCHITECTURE.md
+!requirements.txt
+!package.json
+!.env.example
+!backend/.env.example
+!frontend/.env.example

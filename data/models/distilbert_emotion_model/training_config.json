@@ -1,0 +1,16 @@
+{
+  "model_name": "distilbert-base-uncased",
+  "max_length": 128,
+  "batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "learning_rate": 2e-05,
+  "num_epochs": 4,
+  "warmup_steps": 500,
+  "weight_decay": 0.01,
+  "max_grad_norm": 1.0,
+  "fp16": true,
+  "save_dir": "../data/models/distilbert_emotion_model",
+  "train_file": "../data/processed/train.csv",
+  "val_file": "../data/processed/validation.csv",
+  "test_file": "../data/processed/test.csv"
+}

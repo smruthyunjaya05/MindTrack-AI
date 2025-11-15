@@ -1,0 +1,72 @@
+                `       ````# MindTrack AI - Unified Python Dependencies
+# Single requirements file for the entire project (Backend + ML Training)
+
+# ============================================================================
+# BACKEND - Flask API Server
+# ============================================================================
+
+# Flask Framework
+flask==3.0.0
+flask-cors==4.0.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# HTTP Requests & Web Scraping
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Instagram Scraping (Apify)
+apify-client==2.3.0
+
+# ============================================================================
+# AI/ML - DistilBERT Model (Production)
+# ============================================================================
+
+# Deep Learning
+torch==2.7.1
+transformers==4.48.1
+
+# AI Recommendations
+google-generativeai==0.8.3
+
+# ============================================================================
+# ML TRAINING - Model Development (Optional - only needed for training)
+# ============================================================================
+
+# Data Processing
+pandas==2.1.0
+numpy==1.26.0
+scikit-learn==1.3.0
+
+# Progress Bars
+tqdm==4.66.0
+
+# ============================================================================
+# OPTIONAL - Production Enhancements
+# ============================================================================
+
+# Rate Limiting (uncomment for production)
+# flask-limiter==3.5.0
+
+# Caching (uncomment for production)
+# flask-caching==2.1.0
+
+# ============================================================================
+# INSTALLATION INSTRUCTIONS
+# ============================================================================
+# 
+# For Production (Backend + AI Model):
+#   pip install -r requirements.txt
+#
+# For GPU Support (CUDA 11.8):
+#   pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+#   pip install -r requirements.txt
+#
+# For CPU Only:
+#   pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+#
+# ============================================================================
+
